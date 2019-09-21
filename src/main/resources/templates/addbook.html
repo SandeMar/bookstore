@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Friendlist</title>
+    <title>Kirjalista</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
@@ -22,7 +22,11 @@
 			<div style="clear: both; display: block; height: 10px;"></div>
 			<label for="price">Hinta</label>
 			<input type="text" th:field="*{price}" />
-			<div style="clear: both; display: block; height: 10px;"></div>							
+			<div style="clear: both; display: block; height: 10px;"></div>	
+			<label for="category">Kategoria</label>
+			 <select id="category" th:field="*{category}" class="form-control">
+       			<option th:each="category: ${categories}" th:value="${category.categoryid}" th:text="${category.name}"></option>
+    		</select>						
 		  	
 			
 			
